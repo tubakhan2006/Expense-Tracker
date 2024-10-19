@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Make container more fluid */
+.container {
+    width: 40%;
+    max-width: 40%; /* Allow full width on small screens */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #6d5f67;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+h2{
+    font-family: 'cursive'; 
+    font-style: italic;
+    text-align: 10px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.expense-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.expense-form input, .expense-form select {
+    margin-bottom: 20px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.expense-form button {
+    padding: 10px;
+    background-color: #8dcafc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.expense-form button:hover {
+    background-color:#8dcafc;
+}
+
+.progress-bar-container {
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 20px;
+    background-color: #0b222c;
+    transition: width 0.3s ease;
+}
+
+#expense-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#expense-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#total-expense {
+    color: #612110;
+    font-weight: bold;
+}
+
+#theme-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#refresh-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #8dcafc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#theme-btn.dark-mode, #refresh-btn.dark-mode {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+body.dark {
+    background-color: #270512;
+}
+
+body.dark .container {
+    background-color: #444;
+}
+
+body.dark h2, body.dark h3, body.dark label {
+    color: #fff;
+}
+.delete-btn {
+    background-color: #eaa29d; /* Red color for the delete button */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .delete-btn:hover {
+    background-color: #ec978d; /* Darker red on hover */
+  }
+  
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Make container wider for medium devices */
+        padding: 15px; /* Adjust padding */
+    }
+
+    h2, h3 {
+        font-size: 18px; /* Reduce font size */
+    }
+
+    .expense-form input, .expense-form select {
+        font-size: 14px;
+    }
+
+    .expense-form button {
+        padding: 8px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Full width for mobile devices */
+        padding: 10px; /* Less padding on small screens */
+    }
+
+    h2, h3 {
+        font-size: 16px; /* Smaller text for mobile */
+    }
+
+    .expense-form input, .expense-form select {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .expense-form button {
+        padding: 8px; /* Compact buttons */
+    }
+
+    #expense-list li {
+        padding: 8px;
+        font-size: 14px; /* Smaller font for list items */
+    }
+
+    #theme-btn, #refresh-btn {
+        font-size: 14px; /* Smaller button text */
+    }
+}
